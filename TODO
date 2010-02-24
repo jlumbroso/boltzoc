@@ -1,0 +1,27 @@
+- Composantes fortement connexes
+
+- Precision arbitraire
+  http://www.mpfr.org
+
+- Calculer les derivées par les differences
+  pour la moyenne
+  plus efficace que calculer la derivée directement
+
+- Réutiliser les termes dans la dérivation des équations (DAGuefier)
+  Ajouter un compteur de références dans les équations
+  ou
+  Forme normale (éviter les produits entre expressions compliquées)
+
+- Analyse de singularité
+  dépend des CFC
+
+- Schröder
+  quand la singularité est en racine
+  marche bien que pile sur la singularité, sinon il faut basculer à Newton simple quand on est proche
+
+- Remplacer la dichotomie par la resulution de l'equation |Y - (dH/dY)(x)| = 0
+
+- Vérifier le resultat des appels à malloc
+
+- Générer directement le code du jacobien sans créer l'AST correspondant
+  Réutiliser le code des sous-expressions communes
