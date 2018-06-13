@@ -1,3 +1,15 @@
 
+# Binaries
+example
+a.out
+libcombstruct.a
+
+# combstruct2json dependencies
+combstruct2json.*
+*combstruct2json.*
+
+# editor metadata
+.vscode
+
 # macOS metadata
 .DS_Store
