@@ -1,20 +1,15 @@
 #include <stdlib.h>  /* malloc */
 #include <string.h>  /* strdup */
+
 #include "uthash.h"
 
 #include "symbtab.h"
-
-/*struct _nameid_pair {
-    const char *name;
-    int         id;
-
-    UT_hash_handle hh;
-};*/
 
 int _NEXT_ID = -1;
 int _MAX_TAB = 64;
 struct _nameid_pair *symbols_by_name = NULL;
 char **symbols_by_id = NULL;
+
 
 int symb_lookup(char *name) {
     struct _nameid_pair *record;
