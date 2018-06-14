@@ -3,6 +3,8 @@
 example
 a.out
 libcombstruct.a
+boltzoc
+libboltzoc*
 
 # combstruct2json dependencies
 combstruct2json.*

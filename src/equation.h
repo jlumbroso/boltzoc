@@ -1,6 +1,6 @@
 #ifndef _EQUATION_H
 # define _EQUATION_H
-# include "combstruct.h"
+# include "boltzoc.h"
 
 typedef enum { Epsilon = 0x0BEEF0,
                Atom,

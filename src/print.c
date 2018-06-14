@@ -73,5 +73,5 @@ void print_sys(comb_sys s)
 
 void my_error(char *s)
 {
-  fprintf(stderr, s);
+  fprintf(stderr, "%s", s);
 }

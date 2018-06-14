@@ -1,6 +1,6 @@
 #ifndef _SYSTEM_H
 # define _SYSTEM_H
-# include "combstruct.h"
+# include "boltzoc.h"
 # ifdef COMPILE
 
 typedef double (*f_eval)(double *, double, int *);

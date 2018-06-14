@@ -6,8 +6,8 @@
 
 // Key-value pair prototype.
 struct _nameid_pair {
-    const char *name;
-    int         id;
+    char *name;
+    int     id;
 
     UT_hash_handle hh;
 };

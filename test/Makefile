@@ -4,16 +4,16 @@ CC=gcc
 
 all: test
 
-%: %.c ../src/combstruct.h
+%: %.c ../src/boltzoc.h
 	$(CC) $(CFLAGS) $(LDFLAGS) -lcombstruct -o $@ $<
 
-%_compile_blas: %.c ../src/combstruct.h
+%_compile_blas: %.c ../src/boltzoc.h
 	$(CC) $(CFLAGS) $(LDFLAGS) -lcombstruct_compile_blas -o $@ $<
 
-%_blas: %.c ../src/combstruct.h
+%_blas: %.c ../src/boltzoc.h
 	$(CC) $(CFLAGS) $(LDFLAGS) -lcombstruct_blas -o $@ $<
 
-%_compile: %.c ../src/combstruct.h
+%_compile: %.c ../src/boltzoc.h
 	$(CC) $(CFLAGS) $(LDFLAGS) -lcombstruct_compile -o $@ $<
 
 clean:

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../src/combstruct.h"
+#include "../src/boltzoc.h"
 
 int main(int argc, char **argv)
 {

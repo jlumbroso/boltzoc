@@ -1,7 +1,7 @@
 #ifndef _PARSE_H
 #define _PARSE_H
-#include "combstruct.h"
+#include "boltzoc.h"
 
-comb_sys importGrammar(char* filename);
+comb_sys importGrammar(char* filename, char ***symbols);
 
 #endif

@@ -1,6 +1,6 @@
 #ifndef _EVAL_H
 # define _EVAL_H
-# include "combstruct.h"
+# include "boltzoc.h"
 
 void set_sys(comb_sys);
 

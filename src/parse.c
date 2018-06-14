@@ -3,9 +3,11 @@
 #include <math.h>
 #include <string.h>
 
-#include "combstruct.h"
+#include "boltzoc.h"
 #include "../combstruct2json.h"
 #include "symbtab.h"
+
+#include "parse.h"
 
 // Arbitrary error codes
 #define ERROR_FIXME 120
@@ -21,7 +23,6 @@
  * 
  */
 
-comb_sys importGrammar(char* filename);
 
 // DONE:
 void treewalkRestriction(Restriction rest, long long limit)
@@ -195,8 +196,26 @@ comb_sys treewalkGrammar(const Grammar* grammar)
 }
 
 // DONE:
-comb_sys importGrammar(char* filename) {
+comb_sys importGrammar(char* filename, char ***symbols) {
   Grammar *grammar = readGrammar(filename);
+
+  if (symbols != NULL && grammar->type != ISERROR) {
+    // Grammar was parsed, recuperate symbols.
+    StatementList* Slist = (StatementList*) grammar->component;
+    const Statement** statements = (const Statement**) Slist->components;
+
+    *symbols = malloc(sizeof(char *) * (Slist->size+1));
+    for(int i=0; i < Slist->size; i++) {
+    
+      // Retrieve data from object
+      const Statement *S = statements[i];
+      char *varstr = S->variable->name;
+      (*symbols)[i] = strdup(varstr);
+    }
+
+    // Sentinel
+    (*symbols)[Slist->size] = NULL;
+  }
   return treewalkGrammar(grammar);
 }
 

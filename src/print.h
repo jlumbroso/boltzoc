@@ -1,6 +1,6 @@
 #ifndef _PRINT_H
 # define _PRINT_H
-# include "combstruct.h"
+# include "boltzoc.h"
 # include "jacob.h"
 
 # include "common.h"
