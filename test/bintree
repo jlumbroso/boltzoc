@@ -1,0 +1,10 @@
+# Ordered binary tree grammar
+#
+# NOTE: Here, the size is denoted by the number of external nodes
+# (or leafs). By adjusting which (or both) of ExternalNode and
+# InternalNode have Atom (size 1) or Epsilon (size 0), you can
+# adjust this behavior.
+
+Bintree = Union(ExternalNode, Prod(InternalNode, Prod(Bintree, Bintree))),
+ExternalNode = Atom,
+InternalNode = Epsilon
